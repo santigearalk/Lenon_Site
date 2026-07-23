@@ -1,0 +1,1387 @@
+/* ==========================================================
+   LENON MARMORARIA
+   STYLE.CSS
+========================================================== */
+
+/* ==========================
+   VARIÁVEIS
+========================== */
+
+:root{
+
+    /* Identidade */
+
+    --primary:#A67C52;
+    --primary-hover:#C7A06C;
+
+    /* Fundos */
+
+    --background:#000000;
+    --card:#111111;
+    --card-hover:#000000;
+
+    /* Texto */
+
+    --text:#F5F5F5;
+    --text-secondary:#B7B7B7;
+
+    /* Bordas */
+
+    --border:#A67C52;
+    --border-hover:rgba(255, 255, 255);
+
+    /* Sombras */
+
+    --shadow:0 20px 60px rgba(0,0,0,.40);
+    --shadow-hover:0 30px 70px rgba(0,0,0,.60);
+
+    /* WhatsApp */
+
+    --whatsapp:rgba(57, 226, 119, 0.8);
+    --dark-whatsapp:rgba(17, 138, 65, 0.8);
+
+    /* WhatsApp */
+
+    --transition: 0s;
+
+    --radius:18px;
+
+}
+
+/* ==========================
+   RESET
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.6;
+    background-image: url("../assets/marmore.jpg");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+.page-layout {
+
+    display: grid;
+
+    grid-template-columns: 10% 1fr 10%;
+
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container {
+
+    width: min(92%, var(--max-width));
+
+    margin: auto;
+
+}
+
+/* ==========================
+   ESPAÇAMENTO
+========================== */
+
+section {
+
+    max-width: 1280px;
+
+    margin: auto;
+
+}
+
+.section {
+
+    padding: 120px 0;
+
+}
+
+/* ==========================
+   TITULOS
+========================== */
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 70px;
+
+}
+
+.section-title span {
+
+    color: var(--primary);
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: .85rem;
+
+}
+
+.section-title h2 {
+
+    font-size: 2.6rem;
+
+    margin-top: 12px;
+
+    font-weight: 800;
+
+    color: var(--text);
+
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.header{
+
+height:90px;
+
+padding:0 60px;
+
+background: var(--background);
+
+border-bottom:2px solid var(--border);
+
+}
+
+.header .container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    height: 90px;
+
+}
+
+.logo img {
+
+    width: 230px;
+
+}
+
+.menu {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+.menu a {
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+    position: relative;
+
+}
+
+.menu a:hover {
+
+    color: var(--primary);
+
+}
+
+.menu a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--primary);
+
+    transition: .35s;
+
+}
+
+.menu a:hover::after {
+
+    width: 100%;
+
+}
+
+.btn-header {
+
+    background: var(--primary);
+
+    color: var(--text);
+
+    padding: 14px 26px;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    transition: var(--transition);
+
+}
+
+.btn-header:hover {
+
+    background: var(--background);
+
+    border: 2px solid var(--primary);
+
+    transform: translateY(-3px);
+
+}
+
+.menu-mobile {
+
+    display: none;
+
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero {
+
+    background: var(--background);
+    padding: 90px 0;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.hero-content {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+.tag {
+
+    display: inline-block;
+
+    background: var(--background);
+
+    color: var(--primary);
+
+    padding: 10px 18px;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+}
+
+.hero h1 {
+
+    font-size: 3.8rem;
+
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+
+    font-weight: 800;
+
+}
+
+.hero p {
+
+    color: var(--text);
+
+    font-size: 1.15rem;
+
+    margin-bottom: 40px;
+
+}
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 18px;
+
+}
+
+.btn-primary {
+
+    background: var(--primary);
+
+    color: var(--text);
+
+    padding: 18px 34px;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    transition: var(--transition);
+
+    box-shadow:
+
+        0 15px 45px var(--shadow);
+
+}
+
+.btn-primary:hover {
+
+    transform: translateY(-6px);
+
+    color: var(--text);
+
+    border: 2px solid var(--border-hover);
+    
+    background: linear-gradient(135deg,
+
+            var(--whatsapp),
+
+            var(--dark-whatsapp));
+}
+
+.btn-secondary {
+
+    border: 2px solid var(--primary);
+
+    color: var(--primary);
+
+    padding: 18px 34px;
+
+    border-radius: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-weight: 700;
+
+    transition: var(--transition);
+
+}
+
+.btn-secondary:hover {
+
+    border: 2px solid var(--border-hover);
+
+    background: var(--primary);
+
+    color: var(--text);
+
+}
+
+.hero-image {
+
+    position: relative;
+
+}
+
+.hero-image img {
+
+    border-radius: 28px;
+
+    box-shadow: var(--shadow-hover);
+
+}
+
+/* ==========================
+   SOBRE
+========================== */
+
+.about {
+
+    background: var(--background);
+
+}
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+
+}
+
+.about-card {
+
+    padding: 40px;
+
+    border: 2px solid transparent;
+
+    border-radius: var(--radius);
+
+    color: var(--text);
+
+    background: var(--card);
+
+    box-shadow:
+
+        0 15px 45px var(--shadow);
+
+    transition: var(--transition);
+
+    text-align: center;
+
+}
+
+.about-card:hover,
+.service-card:hover,
+.adv-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: var(--primary);
+
+    box-shadow:
+
+        0 25px 60px var(--shadow-hover);
+
+}
+
+.about-card i {
+
+    font-size: 42px;
+
+    color: var(--primary);
+
+    margin-bottom: 20px;
+
+}
+
+.about-card h3 {
+
+    margin-bottom: 15px;
+
+}
+
+.about-card p {
+
+    color: var(--text-secondary);
+
+}
+
+/* ==========================
+   SERVIÇOS
+========================== */
+
+.services {
+
+    background: var(--background);
+
+}
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+
+}
+
+.service-card {
+
+    background: var(--card);
+
+    padding: 45px 35px;
+
+    border: 2px solid transparent;
+
+    border-radius: var(--radius);
+
+    text-align: center;
+
+    transition: var(--transition);
+
+    box-shadow:
+
+        0 15px 45px var(--shadow);
+
+}
+
+.service-card:hover {
+
+    transform: translateY(-12px);
+
+    box-shadow: var(--shadow-hover);
+
+    border-color: var(--primary);
+
+}
+
+.service-card i {
+
+    font-size: 46px;
+
+    color: var(--primary);
+
+    margin-bottom: 22px;
+
+}
+
+.service-card h3 {
+
+    margin-bottom: 15px;
+
+    font-size: 1.35rem;
+
+    color: var(--text);
+
+}
+
+.service-card p {
+
+    color: var(--text-secondary);
+
+    line-height: 1.8;
+
+}
+
+/* ==========================
+   DIFERENCIAIS
+========================== */
+
+.advantages {
+
+    background: var(--background);
+
+}
+
+.advantages-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+
+}
+
+.adv-card {
+
+    background: var(--card);
+
+    padding: 45px;
+
+    border: 2px solid transparent;
+
+    border-radius: var(--radius);
+
+    text-align: center;
+
+    transition: var(--transition);
+
+    box-shadow:
+
+        0 15px 45px var(--shadow);
+
+}
+
+.adv-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: var(--shadow-hover);
+
+    border-color: var(--primary);
+
+}
+
+.adv-card i {
+
+    width: 75px;
+
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: auto;
+
+    margin-bottom: 25px;
+
+    border-radius: 50%;
+
+    background: var(--card);
+
+    color: var(--primary);
+
+    font-size: 30px;
+
+}
+
+.adv-card h3 {
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+
+    color: var(--text);
+
+}
+
+/* ==========================
+   CONTATO
+========================== */
+
+.contact {
+
+    background: var(--background);
+
+    color: var(--text);
+
+}
+
+.contact-box {
+
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+}
+
+.contact h2 {
+
+    font-size: 2.8rem;
+
+    margin-bottom: 18px;
+
+}
+
+.contact p {
+
+    opacity: .92;
+
+    line-height: 1.8;
+
+}
+
+.contact-buttons {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+.contact-buttons .btn-primary {
+
+    justify-content: center;
+
+    background: var(--primary);
+
+}
+
+.contact-buttons .btn-primary:hover {
+
+    color: var(--text);
+
+    border: 2px solid var(--border-hover);
+
+    background: linear-gradient(135deg,
+
+            var(--whatsapp),
+
+            var(--dark-whatsapp));
+
+}
+
+.contact-buttons .btn-secondary {
+
+    background: transparent;
+
+    justify-content: center;
+
+    border: 2px solid var(--primary);
+
+    color: var(--primary);
+
+}
+
+.contact-buttons .btn-secondary:hover {
+
+    background: var(--primary);
+
+    color: var(--text);
+
+    border: 2px solid var(--border-hover);
+
+}
+
+.contact-info {
+
+    margin-top: 45px;
+
+}
+
+.contact-info p {
+
+    margin-bottom: 14px;
+
+    font-size: 1rem;
+
+}
+
+.contact-info strong {
+
+    color: var(--primary);
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+
+    background: var(--background);
+
+    color: var(--text-secondary);
+
+    padding: 70px 0;
+
+}
+
+.footer-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 40px;
+
+    flex-wrap: wrap;
+
+}
+
+.footer-content img {
+
+    width: 150px;
+
+}
+
+.footer-content p {
+
+    color: var(--text-secondary);
+
+}
+
+.top-button {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: var(--text);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 20px;
+
+    transition: var(--transition);
+
+}
+
+.top-button:hover {
+
+    transform: translateY(-6px);
+
+    background: var(--primary);
+
+}
+
+/* ==========================
+   BOTÃO WHATSAPP
+========================== */
+
+.whatsapp {
+
+    position: fixed;
+
+    right: 30px;
+
+    bottom: 30px;
+
+    width: 68px;
+
+    height: 68px;
+
+    border-radius: 50%;
+
+    background: #25D366;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-size: 34px;
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .22);
+
+    transition: var(--transition);
+
+    z-index: 999;
+
+}
+
+.whatsapp:hover {
+
+    transform: scale(1.08);
+
+}
+
+/* ==========================
+   UTILITÁRIOS
+========================== */
+
+.text-center {
+
+    text-align: center;
+
+}
+
+.mt-1 {
+
+    margin-top: 10px;
+
+}
+
+.mt-2 {
+
+    margin-top: 20px;
+
+}
+
+.mt-3 {
+
+    margin-top: 30px;
+
+}
+
+.mt-4 {
+
+    margin-top: 40px;
+
+}
+
+.mt-5 {
+
+    margin-top: 50px;
+
+}
+
+.mb-1 {
+
+    margin-bottom: 10px;
+
+}
+
+.mb-2 {
+
+    margin-bottom: 20px;
+
+}
+
+.mb-3 {
+
+    margin-bottom: 30px;
+
+}
+
+.mb-4 {
+
+    margin-bottom: 40px;
+
+}
+
+.mb-5 {
+
+    margin-bottom: 50px;
+
+}
+
+.shadow {
+
+    box-shadow:
+
+        0 15px 45px var(--shadow);
+
+}
+
+.radius {
+
+    border-radius: var(--radius);
+
+}
+
+.bg-light {
+
+    background: var(--background);
+
+}
+
+.bg-white {
+
+    background: var(--background);
+
+}
+
+.color-primary {
+
+    color: var(--primary);
+
+}
+
+.color-gray {
+
+    color: var(--text-secondary);
+
+}
+
+.w-100 {
+
+    width: 100%;
+
+}
+
+.d-flex {
+
+    display: flex;
+
+}
+
+.align-center {
+
+    align-items: center;
+
+}
+
+.justify-center {
+
+    justify-content: center;
+
+}
+
+.gap-20 {
+
+    gap: 20px;
+
+}
+
+/* ==========================
+   LINKS
+========================== */
+
+a {
+
+    transition: .2s;
+
+}
+
+a:hover {
+
+    color: var(--primary-hover);
+
+}
+
+/* ==========================
+   BOTÕES
+========================== */
+
+.btn-primary,
+.btn-secondary,
+.btn-header {
+
+    cursor: pointer;
+
+    user-select: none;
+
+}
+
+.btn-primary:active,
+.btn-secondary:active,
+.btn-header:active {
+
+    transform: scale(.98);
+
+}
+
+/* ==========================
+   ÍCONES
+========================== */
+
+i {
+
+    transition: .2s;
+
+}
+
+.service-card:hover i,
+.about-card:hover i,
+.adv-card:hover i {
+
+    transform: scale(1.12);
+
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: var(--background);
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--primary);
+
+    border-radius: 30px;
+
+    border: 2px solid var(--background);
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: var(--primary-hover);
+
+}
+
+/* ==========================
+   SELEÇÃO
+========================== */
+
+::selection {
+
+    background: var(--primary);
+
+    color: var(--text);
+
+}
+
+/* ==========================
+   IMAGENS
+========================== */
+
+.hero-image img,
+.about-card,
+.service-card,
+.adv-card {
+
+    transition: .35s;
+
+}
+
+.hero-image img:hover {
+
+    transform: scale(1.02);
+
+}
+
+/* ==========================
+   HOVER SUAVE
+========================== */
+
+.about-card,
+.service-card,
+.adv-card {
+
+    cursor: default;
+
+}
+
+/* ==========================
+   ESPAÇAMENTO
+========================== */
+
+.section:nth-child(even) {
+
+    position: relative;
+
+}
+
+.section:nth-child(even)::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: var(--border);
+
+}
+
+/* ==========================
+   TRANSIÇÕES GERAIS
+========================== */
+
+* {
+
+    transition-property:
+
+        background,
+
+        color,
+
+        border,
+
+        box-shadow,
+
+        transform;
+
+}
+
+/* ==========================
+   FOCUS (ACESSIBILIDADE)
+========================== */
+
+a:focus-visible,
+button:focus-visible {
+
+    outline: 3px solid var(--primary-hover);
+
+    outline-offset: 4px;
+
+    border-radius: 8px;
+
+}
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo img {
+
+    transition: .3s;
+
+}
+
+.logo:hover img {
+
+    transform: scale(1.04);
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer a {
+
+    color: var(--text);
+
+}
+
+footer a:hover {
+
+    color: var(--primary-hover);
+
+}
+
+.menu.active {
+
+    display: flex;
+
+    flex-direction: column;
+
+    position: absolute;
+
+    top: 90px;
+
+    left: 0;
+
+    width: 100%;
+
+    background: var(--background);
+
+    padding: 25px;
+
+    box-shadow: 0 10px 30px var(--shadow);
+
+}
+
+.header.scroll {
+
+    background: var(--background);
+
+    box-shadow: 0 10px 30px var(--shadow);
+
+}
+
+h1,
+h2,
+h3 {
+
+    font-family:
+
+        'Cormorant Garamond',
+
+        serif;
+
+    letter-spacing: .5px;
+
+}
+
+.section-title {
+
+    position: relative;
+
+}
+
+.section-title::after {
+
+    content: "◆";
+
+    display: block;
+
+    margin-top: 18px;
+
+    color: var(--primary);
+
+    font-size: 18px;
+
+}
+
+.marble-left,
+.marble-right {
+
+    position: sticky;
+
+    top: 0;
+
+    height: 100vh;
+
+    background-image: url("../assets/background-marble.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+}
+
+.site-wrapper {
+
+    background: var(--background);
+
+    overflow: hidden;
+
+    box-shadow:
+
+        0 0 70px var(--shadow);
+
+}

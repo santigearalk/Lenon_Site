@@ -1,0 +1,417 @@
+/* =====================================================
+   ANIMATIONS.CSS
+===================================================== */
+
+/* ==========================
+   TRANSIÇÕES GERAIS
+========================== */
+
+*{
+    transition:
+        background-color .35s ease,
+        color .35s ease,
+        border-color .35s ease,
+        transform .35s ease,
+        box-shadow .35s ease,
+        opacity .35s ease;
+}
+
+/* ==========================
+   FADE IN
+========================== */
+
+.fade-in{
+
+    opacity:0;
+
+    animation:fadeIn .8s ease forwards;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ==========================
+   SLIDE UP
+========================== */
+
+.slide-up{
+
+    opacity:0;
+
+    transform:translateY(45px);
+
+    animation:slideUp .9s ease forwards;
+
+}
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(45px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+   SLIDE LEFT
+========================== */
+
+.slide-left{
+
+    opacity:0;
+
+    transform:translateX(-50px);
+
+    animation:slideLeft .8s ease forwards;
+
+}
+
+@keyframes slideLeft{
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ==========================
+   SLIDE RIGHT
+========================== */
+
+.slide-right{
+
+    opacity:0;
+
+    transform:translateX(50px);
+
+    animation:slideRight .8s ease forwards;
+
+}
+
+@keyframes slideRight{
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ==========================
+   ZOOM
+========================== */
+
+.zoom{
+
+    opacity:0;
+
+    transform:scale(.9);
+
+    animation:zoom .7s ease forwards;
+
+}
+
+@keyframes zoom{
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ==========================
+   FLOAT
+========================== */
+
+.float{
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+   BOTÕES
+========================== */
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.btn-secondary:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.btn-header:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.about-card:hover,
+
+.service-card:hover,
+
+.adv-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/* ==========================
+   IMAGEM HERO
+========================== */
+
+.hero-image img{
+
+    transition:transform .6s ease;
+
+}
+
+.hero-image:hover img{
+
+    transform:scale(1.03);
+
+}
+
+/* ==========================
+   MENU
+========================== */
+
+.menu a{
+
+    position:relative;
+
+}
+
+.menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-5px;
+
+    left:0;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.3s;
+
+}
+
+.menu a:hover::after{
+
+    width:100%;
+
+}
+
+/* ==========================
+   BOTÃO WHATSAPP
+========================== */
+
+.whatsapp{
+
+    animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        box-shadow:0 0 0 0 rgba(37,211,102,.55);
+
+    }
+
+    70%{
+
+        box-shadow:0 0 0 20px rgba(37,211,102,0);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 0 rgba(37,211,102,0);
+
+    }
+
+}
+
+/* ==========================
+   SCROLL REVEAL
+========================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ==========================
+   VOLTAR AO TOPO
+========================== */
+
+.top-button:hover{
+
+    transform:translateY(-6px) rotate(360deg);
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer img{
+
+    transition:.1s;
+
+}
+
+footer img:hover{
+
+    transform:scale(.05);
+
+}
+
+/* ==========================
+   HERO TEXT
+========================== */
+
+.hero h1{
+
+    animation:slideUp .1s ease;
+
+}
+
+.hero p{
+
+    animation:fadeIn .1s ease;
+
+}
+
+.hero-buttons{
+
+    animation:fadeIn .1s ease;
+
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-header{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.ripple{
+
+position:absolute;
+
+border-radius:50%;
+
+transform:scale(0);
+
+background:rgba(255,255,255,.4);
+
+animation:ripple .6s linear;
+
+pointer-events:none;
+
+}
+
+@keyframes ripple{
+
+to{
+
+transform:scale(4);
+
+opacity:0;
+
+}
+
+}
