@@ -1364,7 +1364,7 @@ h3 {
 
     height: 100vh;
 
-    background-image: url("../ASSETS/background-marble.jpg");
+    background-image: url("./ASSETS/background-marble.jpg");
 
     background-size: cover;
 
