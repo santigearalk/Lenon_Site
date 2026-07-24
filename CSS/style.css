@@ -68,7 +68,7 @@ body {
     color: var(--text);
     overflow-x: hidden;
     line-height: 1.6;
-    background-image: url(".../ASSETS/marmore.jpg");
+    background-image: url("../ASSETS/marmore.jpg");
 
     background-size: cover;
 
